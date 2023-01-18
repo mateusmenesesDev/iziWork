@@ -15,6 +15,9 @@ module.exports = {
       info: 'AFAFAF',
       container: '#FFF',
     },
+    fontFamily: {
+      main: ['Poppins', 'sans-serif'],
+    },
   },
   plugins: [],
 };
