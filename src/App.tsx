@@ -1,10 +1,11 @@
-import { MantineProvider, Text } from '@mantine/core';
+import { MantineProvider } from '@mantine/core';
+import Kanban from './Kanban/Kanban'
 
 function App() {
   return (
     <div>
       <MantineProvider withGlobalStyles withNormalizeCSS>
-        <Text sx={{ backgroundColor: 'red' }}>Welcome to Mantine!</Text>
+        <Kanban />
       </MantineProvider>
     </div>
   );
