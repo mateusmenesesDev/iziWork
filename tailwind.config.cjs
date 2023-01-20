@@ -14,6 +14,7 @@ module.exports = {
       success: '00C271',
       info: '9A9A9A',
       container: '#FFF',
+      placeholder: '#757575',
     },
     fontFamily: {
       main: ['Poppins', 'sans-serif'],
