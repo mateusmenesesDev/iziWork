@@ -1,9 +1,8 @@
 import { v4 as uuidv4 } from "uuid";
 
 const itemsFromBackend = [
-  { id: uuidv4(), content: "First task" },
-  { id: uuidv4(), content: "Second task" },
-  { id: uuidv4(), content: "Third task" },
+  { id: uuidv4(), content: "First task", cod: "t-24", members: 25,},
+  { id: uuidv4(), content: "second task", cod: "t-24", members: 25,},
 ];
 
 const columnsFromBackend = {
@@ -13,9 +12,9 @@ const columnsFromBackend = {
   },
   [uuidv4()]: {
     name: "In Progress",
-    items: [{  id: uuidv4(), content: "First task" },
-    { id: uuidv4(), content: "Second task" },
-    { id: uuidv4(), content: "Third task" },],
+    items: [{  id: uuidv4(), content: "First task", cod: "t-24", members: 25, },
+    { id: uuidv4(), content: "Second task", cod: "t-24", members: 25, },
+    { id: uuidv4(), content: "Third task" , cod: "t-24", members: 25,},],
   },
   [uuidv4()]: {
     name: "Done",

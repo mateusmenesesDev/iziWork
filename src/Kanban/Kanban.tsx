@@ -8,7 +8,7 @@ const Kanban = () => {
   const [columns, setColumns] = useState(columnsFromBackend);
 
   return (
-    <div className = 'h-full'>
+    <div className = 'h-full bg-container w-full overflow-auto'>
       <div className="flex justify-center h-full">
         <DragDropContext onDragEnd={(result) => {
           onDragEnd(result, columns, setColumns)

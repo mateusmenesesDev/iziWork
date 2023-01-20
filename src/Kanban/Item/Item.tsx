@@ -4,21 +4,31 @@ interface Iitem {
   id: string;
   content: string;
   index: number;
+  cod: string;
+  members: number
 }
 
-const Item = ({ id, content, index}: Iitem) => {
+const Item = ({ id, content, index, cod, members}: Iitem) => {
   return (
     <Draggable key={id} draggableId={id} index={index}>
-    {(provided, snapshot) => {
+    {(provided) => {
       return (
         <div
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
-          className={`select-none h-40 p-2 rounded-md shadow-md my-2 ${snapshot.isDragging ? 'bg-gray-100' : 'bg-white'}`}
+          className={`select-none shadow-sm justify-between flex flex-col w-72 h-44 rounded-xl font-main p-5 bg-[#FFF]`}
           style={{ ...provided.draggableProps.style }}
         >
-          {content}
+          <div className='w-full text-sm'>
+            <p className='font-medium text-[#B9B9B9]'>{cod.toUpperCase()}</p>
+        </div>
+        <div className='font-semibold w-4/5'>
+            {content}
+        </div>
+        <div className='w-full'>
+            <p className='text-blue font-medium text-sm'>Assign Members</p>
+        </div>
         </div>
       )
     }}
