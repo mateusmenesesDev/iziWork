@@ -1,10 +1,11 @@
+import { Avatar } from '@mantine/core';
 import React from 'react';
 import { BurgerBtn } from '../BurgerBtn';
 import InputSearch from '../InputSearch';
 
 export default function Header() {
   return (
-    <div className='bg-container flex py-10 items-center justify-between px-5'>
+    <div className='bg-container bg-red-500 flex py-10 items-center justify-between px-5'>
       <div className='flex items-center gap-12'>
         <BurgerBtn />
         <div className='font-semibold text-2xl'>Page Name</div>
@@ -25,7 +26,11 @@ export default function Header() {
           <p className='font-semibold text-base'>Mateus Meneses</p>
           <p className='text-xs text-info'>Front-End Dev</p>
         </div>
-        <div>IMAGE</div>
+        <div>
+          <Avatar color='gray' radius='xl'>
+            MK
+          </Avatar>
+        </div>
       </div>
     </div>
   );
