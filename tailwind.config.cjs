@@ -5,14 +5,14 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      neutral: '#ECECEC',
+      neutral: '#F9F9F9',
       accent: {
         primary: '#FABB18',
         secondary: '#FFF8E8',
       },
       error: '#FB151A',
       success: '00C271',
-      info: 'AFAFAF',
+      info: '9A9A9A',
       container: '#FFF',
     },
     fontFamily: {
