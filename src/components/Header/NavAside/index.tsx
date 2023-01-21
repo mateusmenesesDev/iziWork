@@ -1,4 +1,11 @@
-import { useState } from 'react';
+import { NativeSelect } from '@mantine/core';
+import {
+  IconChecklist,
+  IconDeviceAnalytics,
+  IconHome2,
+  IconReportAnalytics,
+  IconSettings,
+} from '@tabler/icons';
 import NavItem from './NavItem/NavItem';
 
 type Props = {
@@ -16,14 +23,20 @@ export default function NavAside({ aside }: Props) {
       </div>
       <div className='mb-24'>
         <ul>
-          <NavItem active> Home </NavItem>
-          <NavItem> Analytic </NavItem>
-          <NavItem> Todo </NavItem>
-          <NavItem> Report </NavItem>
-          <NavItem> Settings </NavItem>
+          <NavItem active Icon={IconHome2}>
+            {' '}
+            Home{' '}
+          </NavItem>
+          <NavItem Icon={IconDeviceAnalytics}> Analytic </NavItem>
+          <NavItem Icon={IconChecklist}> Todo </NavItem>
+          <NavItem Icon={IconReportAnalytics}> Report </NavItem>
+          <NavItem Icon={IconSettings}> Settings </NavItem>
         </ul>
       </div>
-      <div>Workspaces</div>
+      <NativeSelect
+        data={['Devs Trybe', 'Mywork', 'Personal', 'Fun']}
+        label='Select your workspace'
+      />
     </div>
   );
 }
