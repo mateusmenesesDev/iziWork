@@ -14,7 +14,7 @@ export default function InputSearch() {
       transition='pop-top-left'
       transitionDuration={80}
       transitionTimingFunction='ease'
-      sx={{ '&::placeholder': { backgroundColor: 'red' } }}
+      styles={{ input: { backgroundColor: '#EFEFEF78', borderRadius: '18px' } }}
       variant={'filled'}
     />
   );
