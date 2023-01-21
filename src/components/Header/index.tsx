@@ -10,7 +10,7 @@ type Props = {
 export default function Header({ setAside, aside }: Props) {
   const [count, setCount] = useState(1);
   return (
-    <header className='flex justify-between bg-container py-10'>
+    <header className='flex justify-between items-center bg-container h-32 px-10'>
       <div className='flex gap-12'>
         <div onClick={() => setAside(!aside)}>
           <BurgerBtn />
