@@ -1,18 +1,13 @@
-import { useState } from 'react';
-import Header from './components/Header';
-import NavAside from './components/Header/NavAside';
+import MainLayout from './components/MainLayout';
+import RouteList from './routes/Routes';
 
 function App() {
-  const [aside, setAside] = useState(false);
   return (
-    <div className='grid grid-cols-6'>
-      <div className='col-span-1'>
-        <NavAside aside={aside} />
-      </div>
-      <div className={`${aside ? 'col-span-5' : 'col-span-6'}`}>
-        <Header setAside={setAside} aside={aside} />
-      </div>
-    </div>
+    <>
+      <MainLayout>
+        <RouteList />
+      </MainLayout>
+    </>
   );
 }
 
