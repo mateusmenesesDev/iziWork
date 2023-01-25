@@ -16,7 +16,7 @@ export default function NavAside({ aside }: Props) {
     <div
       className={`${
         aside ? 'block' : 'hidden'
-      } flex flex-col items-center bg-container h-screen`}
+      } flex flex-col items-center bg-container h-full`}
     >
       <div className='text-3xl font-semibold h-32 flex items-center mb-24'>
         IzI Work
@@ -24,8 +24,7 @@ export default function NavAside({ aside }: Props) {
       <div className='mb-24'>
         <ul>
           <NavItem active Icon={IconHome2}>
-            {' '}
-            Home{' '}
+            Home
           </NavItem>
           <NavItem Icon={IconDeviceAnalytics}> Analytic </NavItem>
           <NavItem Icon={IconChecklist}> Todo </NavItem>
