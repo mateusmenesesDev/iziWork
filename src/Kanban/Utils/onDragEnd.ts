@@ -1,5 +1,6 @@
 import React from "react";
 import { DropResult } from "react-beautiful-dnd";
+import { Iitem } from "../types";
 
 
 interface Icolumns {
@@ -7,13 +8,6 @@ interface Icolumns {
     name: string;
     items: Iitem[];
   }
-}
-
-interface Iitem {
-  id: string;
-  content: string;
-  cod: string;
-  members: string[];
 }
 
 const onDragEnd = (result: DropResult, columns: Icolumns, setColumns: React.Dispatch<React.SetStateAction<Icolumns>>) => {

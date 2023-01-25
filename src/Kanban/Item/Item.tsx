@@ -1,17 +1,10 @@
 import AvatarGroup from "../../AvatarGroup/AvatarGroup";
 import { Draggable } from "react-beautiful-dnd";
-
-interface Iitem {
-  id: string;
-  content: string;
-  index: number;
-  cod: string;
-  members: Array<string>;
-}
+import { Iitem } from "../types";
 
 const Item = ({ id, content, index, cod, members}: Iitem) => {
   return (
-    <Draggable key={id} draggableId={id} index={index}>
+    <Draggable key={id} draggableId={id} index={index || 0}>
     {(provided) => {
       return (
         <div

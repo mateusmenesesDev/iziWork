@@ -1,25 +1,28 @@
 import { Droppable } from "react-beautiful-dnd";
 import Item from "../Item/Item";
 import { Menu } from "@mantine/core";
+import { Icolumn } from "../types";
 
-interface Icolumn {
-  name: string;
-  items: { id: string; content: string; cod: string; members: Array<string> }[];
-}
+type Icollumns = {
+  [key: string]: Icolumn;
+};
 
-interface Iprops {
+type Iprops = {
   columnId: string;
   column: Icolumn;
-  setColumns: React.Dispatch<React.SetStateAction<Icolumn>>;
+  setColumns: React.Dispatch<React.SetStateAction<Icollumns>>;
 }
 
 const Collumn = ({ columnId, column, setColumns }: Iprops) => {
-  const handleDeleteCollum = (columnId: string) => {
+  const handleDeleteCollum = (columnId: string) =>
+  //quando estiver pegando dados no servidor e não no localstorage, tem que fazer um fetch aqui
+  {
     setColumns(({ ...columns }) => {
       delete columns[columnId];
       return columns;
     });
   };
+
   return (
     <div className="flex flex-col">
       <div className="flex w-full justify-between items-center p-5 group">
