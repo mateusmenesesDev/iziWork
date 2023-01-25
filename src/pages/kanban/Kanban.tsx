@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { DragDropContext } from "react-beautiful-dnd";
-import onDragEnd from "../components/kanban/utils/onDragEnd";
-import columnsFromBackend from "../components/kanban/utils/data";
-import Collumn from "../components/kanban/collumn/Collumn";
+import onDragEnd from "./utils/onDragEnd";
+import columnsFromBackend from "../../utils/data";
+import Collumn from "./collumn/Collumn";
 import { v4 as uuidv4 } from "uuid";
 
 const Kanban = () => {
