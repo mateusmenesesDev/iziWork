@@ -22,7 +22,7 @@ const Item = ({ id, content, index, cod, members}: Iitem) => {
         </div>
         <div className='w-full'>
           {
-            members.length === 0 ? <p className='text-blue font-medium text-sm'>Assign Members</p> : <AvatarGroup members={members}/>
+            members.length === 0 ? <p className='text-blue-500 font-medium text-sm'>Assign Members</p> : <AvatarGroup members={members}/>
           }
         </div>
         </div>
