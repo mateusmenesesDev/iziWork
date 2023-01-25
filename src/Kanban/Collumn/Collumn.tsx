@@ -1,11 +1,7 @@
 import { Droppable } from "react-beautiful-dnd";
 import Item from "../Item/Item";
 import { Menu } from "@mantine/core";
-import { Icolumn } from "../types";
-
-type Icollumns = {
-  [key: string]: Icolumn;
-};
+import { Icolumn, Icollumns } from "../types";
 
 type Iprops = {
   columnId: string;
@@ -56,15 +52,14 @@ const Collumn = ({ columnId, column, setColumns }: Iprops) => {
                 snapshot.isDraggingOver ? "bg-neutral" : "bg-container"
               } p-4 w-80 h-full gap-2 flex flex-col`}
             >
-              {column.items.map(({ id, content, cod, members }, index) => {
+              {column.items.map((item, index) => {
                 return (
                   <Item
-                    key={id}
-                    id={id}
-                    content={content}
+                    key={item.id}
+                    item={item}
                     index={index}
-                    cod={cod}
-                    members={members}
+                    setColumns={setColumns}
+                    columnId={columnId}
                   />
                 );
               })}
