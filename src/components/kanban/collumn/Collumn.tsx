@@ -1,7 +1,7 @@
 import { Droppable } from "react-beautiful-dnd";
-import Item from "../Item/Item";
+import Item from "../item/Item";
 import { Menu } from "@mantine/core";
-import { Icolumn, Icollumns } from "../types";
+import { Icolumn, Icollumns } from "../../../types/itemsTypes";
 
 type Iprops = {
   columnId: string;
@@ -66,7 +66,7 @@ const Collumn = ({ columnId, column, setColumns }: Iprops) => {
               ref={provided.innerRef}
               className={`${
                 snapshot.isDraggingOver ? "bg-neutral" : "bg-container"
-              } group p-4 w-80 h-full gap-2 flex flex-col`}
+              } group-one p-4 w-80 h-full gap-2 flex flex-col`}
             >
               {column.items.map((item, index) => {
                 return (
@@ -79,7 +79,7 @@ const Collumn = ({ columnId, column, setColumns }: Iprops) => {
                   />
                 );
               })}
-              <div className="flex invisible group-hover:visible justify-center items-center w-full h-10 bg-[#D5D5D5] rounded-lg cursor-pointer hover:bg-[#C4C4C4]" onClick={handleAddItem}>
+              <div className="flex invisible group-one-hover:visible justify-center items-center w-full h-10 bg-[#D5D5D5] rounded-lg cursor-pointer hover:bg-[#C4C4C4]" onClick={handleAddItem}>
                 Add Item
               </div>
               {provided.placeholder}

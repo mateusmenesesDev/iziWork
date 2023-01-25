@@ -1,6 +1,6 @@
 import React from "react";
 import { DropResult } from "react-beautiful-dnd";
-import { Iitem } from "../types";
+import { Iitem } from "../../../types/itemsTypes";
 
 
 interface Icolumns {

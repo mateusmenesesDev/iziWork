@@ -19,6 +19,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.2",
     "react-window": "^1.8.8",
+    "tailwindcss-scoped-groups": "^2.0.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {

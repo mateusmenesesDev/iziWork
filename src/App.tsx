@@ -1,5 +1,5 @@
 import { MantineProvider } from '@mantine/core';
-import Kanban from './Kanban/Kanban'
+import Kanban from './pages/Kanban'
 
 function App() {
   return (

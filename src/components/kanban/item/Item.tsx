@@ -1,6 +1,6 @@
-import AvatarGroup from "../../AvatarGroup/AvatarGroup";
+import AvatarGroup from "../../avatarGroup/AvatarGroup";
 import { Draggable } from "react-beautiful-dnd";
-import { Iitem, Icollumns } from "../types";
+import { Iitem, Icollumns } from "../../../types/itemsTypes";
 import { Menu } from "@mantine/core";
 
 type props = {
