@@ -1,5 +1,14 @@
+import MainLayout from './components/MainLayout';
+import RouteList from './routes/Routes';
+
 function App() {
-  return <div>INÍCIO</div>;
+  return (
+    <>
+      <MainLayout>
+        <RouteList />
+      </MainLayout>
+    </>
+  );
 }
 
 export default App;
