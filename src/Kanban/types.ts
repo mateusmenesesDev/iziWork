@@ -3,7 +3,6 @@ export interface Iitem {
   content: string;
   cod: string;
   members: string[];
-  index?: number;
 }
 
 export interface Icolumn {

@@ -19,6 +19,22 @@ const Collumn = ({ columnId, column, setColumns }: Iprops) => {
     });
   };
 
+  const handleAddItem = () => {
+    //quando estiver pegando dados no servidor e não no localstorage, tem que fazer um fetch aqui
+    setColumns(({ ...columns }) => {
+      columns[columnId].items = [
+        ...columns[columnId].items,
+        {
+          id: Math.random().toString(36).substr(2, 9),
+          content: "New Item",
+          cod: "new",
+          members: [],
+        },
+      ];
+      return columns;
+    });
+  };
+
   return (
     <div className="flex flex-col">
       <div className="flex w-full justify-between items-center p-5 group">
@@ -50,7 +66,7 @@ const Collumn = ({ columnId, column, setColumns }: Iprops) => {
               ref={provided.innerRef}
               className={`${
                 snapshot.isDraggingOver ? "bg-neutral" : "bg-container"
-              } p-4 w-80 h-full gap-2 flex flex-col`}
+              } group p-4 w-80 h-full gap-2 flex flex-col`}
             >
               {column.items.map((item, index) => {
                 return (
@@ -63,6 +79,9 @@ const Collumn = ({ columnId, column, setColumns }: Iprops) => {
                   />
                 );
               })}
+              <div className="flex invisible group-hover:visible justify-center items-center w-full h-10 bg-[#D5D5D5] rounded-lg cursor-pointer hover:bg-[#C4C4C4]" onClick={handleAddItem}>
+                Add Item
+              </div>
               {provided.placeholder}
             </div>
           );
