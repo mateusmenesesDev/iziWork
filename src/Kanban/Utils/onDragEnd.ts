@@ -13,7 +13,7 @@ interface Iitem {
   id: string;
   content: string;
   cod: string;
-  members: number;
+  members: string[];
 }
 
 const onDragEnd = (result: DropResult, columns: Icolumns, setColumns: React.Dispatch<React.SetStateAction<Icolumns>>) => {

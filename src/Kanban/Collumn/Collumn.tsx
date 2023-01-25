@@ -4,7 +4,7 @@ import { Menu } from "@mantine/core";
 
 interface Icolumn {
   name: string;
-  items: { id: string; content: string; cod: string; members: number }[];
+  items: { id: string; content: string; cod: string; members: Array<string> }[];
 }
 
 interface Iprops {

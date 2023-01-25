@@ -1,3 +1,4 @@
+import AvatarGroup from "../../AvatarGroup/AvatarGroup";
 import { Draggable } from "react-beautiful-dnd";
 
 interface Iitem {
@@ -5,7 +6,7 @@ interface Iitem {
   content: string;
   index: number;
   cod: string;
-  members: number
+  members: Array<string>;
 }
 
 const Item = ({ id, content, index, cod, members}: Iitem) => {
@@ -27,7 +28,9 @@ const Item = ({ id, content, index, cod, members}: Iitem) => {
             {content}
         </div>
         <div className='w-full'>
-            <p className='text-blue font-medium text-sm'>Assign Members</p>
+          {
+            members.length === 0 ? <p className='text-blue font-medium text-sm'>Assign Members</p> : <AvatarGroup members={members}/>
+          }
         </div>
         </div>
       )
