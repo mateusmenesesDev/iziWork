@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { DragDropContext } from "react-beautiful-dnd";
 import onDragEnd from "./Utils/onDragEnd";
 import columnsFromBackend from "./Utils/data";
@@ -16,7 +16,7 @@ const Kanban = () => {
           {Object.entries(columns)
             .map(([columnId, column]) => {
               return (
-                <Collumn key={columnId} columnId={columnId} column={column} />
+                <Collumn key={columnId} columnId={columnId} column={column} setColumns={setColumns}/>
               )
             })
           }

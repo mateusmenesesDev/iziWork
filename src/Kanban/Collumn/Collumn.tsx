@@ -10,9 +10,16 @@ interface Icolumn {
 interface Iprops {
   columnId: string;
   column: Icolumn;
+  setColumns: React.Dispatch<React.SetStateAction<Icolumn>>;
 }
 
-const Collumn = ({ columnId, column }: Iprops) => {
+const Collumn = ({ columnId, column, setColumns }: Iprops) => {
+  const handleDeleteCollum = (columnId: string) => {
+    setColumns(({ ...columns }) => {
+      delete columns[columnId];
+      return columns;
+    });
+  };
   return (
     <div className="flex flex-col">
       <div className="flex w-full justify-between items-center p-5 group">
@@ -32,7 +39,7 @@ const Collumn = ({ columnId, column }: Iprops) => {
 
           <Menu.Dropdown className="hidden group-hover:block">
             <Menu.Label>{column.name}</Menu.Label>
-            <Menu.Item color="red">Delete</Menu.Item>
+            <Menu.Item color="red" onClick={() => handleDeleteCollum(columnId)}>Delete</Menu.Item>
           </Menu.Dropdown>
         </Menu>
       </div>

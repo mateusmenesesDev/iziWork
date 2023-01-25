@@ -1,4 +1,3 @@
-import React from "react";
 import getPersonFromId from "./utils/getPersonFromId";
 import { Avatar, Tooltip } from "@mantine/core";
 
