@@ -8,9 +8,10 @@ type props = {
   index: number;
   setColumns: React.Dispatch<React.SetStateAction<Icollumns>>;
   columnId: string;
+  onClick: () => void;
 };
 
-const Item = ({ item, index, setColumns, columnId }: props) => {
+const Item = ({ item, index, setColumns, columnId, onClick }: props) => {
   const handleDeleteItem = (id: string) => {
     //quando estiver pegando dados no servidor e não no localstorage, tem que fazer um fetch aqui
     setColumns(({ ...columns } : Icollumns) => {
@@ -31,6 +32,7 @@ const Item = ({ item, index, setColumns, columnId }: props) => {
             {...provided.dragHandleProps}
             className={`group select-none shadow-sm justify-between flex flex-col w-72 h-44 rounded-xl font-main p-5 bg-[#FFF]`}
             style={{ ...provided.draggableProps.style }}
+            onClick={onClick}
           >
             <div className="w-full text-sm flex justify-between items-center">
               <p className="font-medium text-[#B9B9B9]">{item.cod.toUpperCase()}</p>
